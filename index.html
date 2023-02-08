@@ -57,6 +57,20 @@
             >
           </li>
         </ul>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="mobile-menu-icon"
+            width="32"
+            height="22"
+            fill="currentColor"
+          >
+            <use href="./images/icons.svg#icon-menu-hamburger"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -458,58 +472,58 @@
           <p class="registration-form-title">
             Leave your contacts and we will call you back
           </p>
-
-          <label class="registration-form-field">
-            <span class="registration-form-label">Name</span>
-            <input
-              class="registration-form-input"
-              type="text"
-              name="user_name"
-              required
-            />
-            <svg
-              class="registration-form-icon-person"
-              width="18px"
-              height="18px"
-            >
-              <use href="./images/icons.svg#icon-person"></use>
-            </svg>
-          </label>
-          <label class="registration-form-field">
-            <span class="registration-form-label">Phone</span>
-            <input
-              class="registration-form-input"
-              type="tel"
-              name="user_phone"
-              required
-            />
-            <svg class="registration-form-icon" width="18px" height="24px">
-              <use href="./images/icons.svg#icon-phone"></use>
-            </svg>
-          </label>
-          <label class="registration-form-field">
-            <span class="registration-form-label">Email</span>
-            <input
-              class="registration-form-input"
-              type="email"
-              name="user_email"
-              required
-            />
-            <svg class="registration-form-icon" width="18px" height="24px">
-              <use href="./images/icons.svg#icon-email"></use>
-            </svg>
-          </label>
-          <label class="registration-form-field">
-            <span class="registration-form-label">Comment</span>
-            <textarea
-              class="registration-form-massage"
-              rows="10"
-              name="user_massage"
-              required
-              placeholder="Text input"
-            ></textarea>
-          </label>
-
+          <div class="registration-form-group">
+            <label class="registration-form-field">
+              <span class="registration-form-label">Name</span>
+              <input
+                class="registration-form-input"
+                type="text"
+                name="user_name"
+                required
+              />
+              <svg
+                class="registration-form-icon-person"
+                width="18px"
+                height="18px"
+              >
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </label>
+            <label class="registration-form-field">
+              <span class="registration-form-label">Phone</span>
+              <input
+                class="registration-form-input"
+                type="tel"
+                name="user_phone"
+                required
+              />
+              <svg class="registration-form-icon" width="18px" height="24px">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </label>
+            <label class="registration-form-field">
+              <span class="registration-form-label">Email</span>
+              <input
+                class="registration-form-input"
+                type="email"
+                name="user_email"
+                required
+              />
+              <svg class="registration-form-icon" width="18px" height="24px">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </label>
+            <label class="registration-form-field">
+              <span class="registration-form-label">Comment</span>
+              <textarea
+                class="registration-form-massage"
+                rows="10"
+                name="user_massage"
+                required
+                placeholder="Text input"
+              ></textarea>
+            </label>
+          </div>
           <label class="registration-form-agreement">
             <input
               class="registration-form-checkbox"
@@ -524,7 +538,39 @@
           <button class="registration-form-button" type="submit">Send</button>
         </form>
       </div>
+
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+          <svg
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+
+        <ul class="mobile-menu">
+          <li><a href="" class="link">About</a></li>
+          <li><a href="" class="link">Products</a></li>
+          <li><a href="" class="link">Contacts</a></li>
+          <li><a href="" class="link">Career</a></li>
+        </ul>
+      </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
