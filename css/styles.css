@@ -1387,14 +1387,18 @@ a {
   stroke: var(--main-text-color);
 }
 
+.menu-toggle-close-icon {
+  stroke: var(--main-text-color);
+}
+
 .menu-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 32px;
-  background-color: #3f51b5;
+  padding: 80px 40px 40px 40px;
+  background-color: var(--main-color);
   z-index: 999;
 
   transform: translateX(100%);
@@ -1407,9 +1411,13 @@ a {
 
 .menu-container .menu-toggle {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  color: #fff;
+  top: 40px;
+  right: 40px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .mobile-menu {
@@ -1420,7 +1428,94 @@ a {
 
 .mobile-menu .link {
   display: block;
-  padding: 10px;
-  color: #fff;
   text-decoration: none;
+}
+
+.mobile-menu-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.mobile-menu-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--main-text-color);
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link:focus {
+  color: var(--accent-color);
+}
+
+.mobile-contacts {
+  list-style: none;
+  margin-bottom: 40px;
+}
+
+.mobile-contacts-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.mobile-contacts-link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  list-style: none;
+  text-decoration: none;
+  color: var(--second-text-color);
+}
+
+.mobile-contacts-link.accent {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.11;
+  text-transform: capitalize;
+}
+
+.mobile-contacts-link:hover,
+.mobile-contacts-link:focus {
+  color: var(--accent-color);
+}
+
+.mobile-menu-soc-list {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.mobile-menu-soc-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-menu-soc-item:not(:last-child) {
+  margin-right: 56px;
+}
+
+.mobile-menu-soc-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent-color);
+
+  transition: background-color var(--anim-fast);
+}
+
+.mobile-menu-soc-link:hover,
+.mobile-menu-soc-link:focus {
+  fill: currentColor;
+  background-color: #404bbf;
+}
+
+.mobile-menu-soc-icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--second-color);
 }
