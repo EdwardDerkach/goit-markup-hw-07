@@ -10,6 +10,8 @@
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 *,
@@ -567,11 +569,74 @@ a {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero-bg-img.jpg),
+    url(../images/hero-bg-img-mob@1x.jpg),
     linear-gradient(var(--main-text-color), var(--main-text-color));
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1440px, 1440px, 1440px;
+  background-size: 480px, 480px, 480px;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg-img-mob@2x.jpg),
+      linear-gradient(var(--main-text-color), var(--main-text-color));
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg-img-tabl@1x.jpg),
+      linear-gradient(var(--main-text-color), var(--main-text-color));
+    background-size: 768px, 768px, 768px;
+  }
+}
+
+@media screen and (min-width: 481px) and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg-img-tabl@2x.jpg),
+      linear-gradient(var(--main-text-color), var(--main-text-color));
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg-img.jpg),
+      linear-gradient(var(--main-text-color), var(--main-text-color));
+    background-size: 1440px, 1440px, 1440px;
+  }
+}
+
+@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg-img-desk@2x.jpg),
+      linear-gradient(var(--main-text-color), var(--main-text-color));
+  }
 }
 
 @media screen and (min-width: 768px) {
